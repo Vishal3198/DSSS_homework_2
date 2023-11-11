@@ -1,12 +1,12 @@
 import random
 
 # funtion to generate a random variable between two values
-def generate_random_integer(min, max):
+def random_integer(min, max):
     """Generates a random integer between the specified minimum and maximum values."""
     return random.randint(min, max)
 
 #Function to generate a random choice of operational symbol
-def generate_random_operation():
+def random_operation():
     """Generate a random operation symbol (+, -, *)."""
     operations = ['+', '-', '*']
     return random.choice(['+', '-', '*'])
@@ -31,9 +31,9 @@ def math_quiz():
 
     for _ in range(int(total_questions)):
         #Generate two random numbers and an operation sysmbol
-        num1 = generate_random_integer(1, 10); 
-        num2 = generate_random_integer(1, 5.5); 
-        operation = generate_random_operation()
+        num1 = random_integer(1, 10); 
+        num2 = random_integer(1, 5.5); 
+        operation = random_operation()
 
         #Formulate the math problem equation
         problem = f"{num1} {operation} {num2}"
