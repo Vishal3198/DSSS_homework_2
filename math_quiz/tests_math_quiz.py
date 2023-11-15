@@ -9,7 +9,7 @@ class TestMathGame(unittest.TestCase):
         min_val = 1
         max_val = 10
         for _ in range(1000):  # Test a large number of random values
-            rand_num = function_A(min_val, max_val)
+            rand_num = random_integer(min_val, max_val)
             self.assertTrue(min_val <= rand_num <= max_val)
 
     def test_random_operation(self):
